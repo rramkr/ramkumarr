@@ -543,7 +543,7 @@
                         <div class="credential-label">Clients Coached</div>
                     </div>
                     <div class="credential-item">
-                        <div class="credential-number">15+</div>
+                        <div class="credential-number" id="years-experience">25+</div>
                         <div class="credential-label">Years Experience</div>
                     </div>
                 </div>
@@ -563,8 +563,21 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 Ramkumar R. All rights reserved.</p>
+            <p id="copyright">&copy; 2026 Ramkumar R. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        // Dynamic year calculations
+        const currentYear = new Date().getFullYear();
+        const startYear = 2000; // Career start year
+        const yearsExperience = currentYear - startYear;
+
+        // Update years of experience
+        document.getElementById('years-experience').textContent = yearsExperience + '+';
+
+        // Update copyright year
+        document.getElementById('copyright').textContent = `© ${currentYear} Ramkumar R. All rights reserved.`;
+    </script>
 </body>
 </html>
